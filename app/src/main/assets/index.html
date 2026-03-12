@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;overflow:hidden;height:100vh;width:100vw}#game-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}.run-ui-layer{position:absolute;inset:0;pointer-events:none;z-index:20;overflow:hidden}.rt-widget{position:absolute;pointer-events:auto;box-sizing:border-box}</style>
-</head>
-<body>
+</head><body>
 <canvas id="game-canvas"></canvas>
 <div id="run-ui" class="run-ui-layer"></div>
 <script>window.data=[];window.ctx={};window.save=function(){};window.render=function(){};window.navTo=function(){};window.handleBack=function(){};window.handleAdd=function(){};</script>
 <script src="base.js"></script>
 <script src="oneparty.js"></script>
 <script src="twoparty.js"></script>
-<script>(function(){try{var p=JSON.parse(`{}`);window.startLaunch([p],{pid:p.id});}catch(e){document.body.innerHTML='<div style="color:#f87171;padding:40px;text-align:center"><div style="font-size:48px">⚠</div><br>'+e.message+'</div>';}})()</script>
-</body>
-</html>
+<script>(function(){
+  try{
+    var p=JSON.parse(`{}`);
+    window.startLaunch([p],{pid:p.id});
+  }catch(e){
+    document.body.innerHTML='<div style="color:#f87171;padding:40px;text-align:center">'+(e.message||e)+'</div>';
+  }
+})();</script>
+</body></html>
